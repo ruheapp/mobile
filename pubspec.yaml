@@ -20,9 +20,12 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   cloud_firestore: ^0.8.2
-  rxdart: ^0.20.0
   dio: ^1.0.14
   fluro: ^1.4.0
+  rxdart: ^0.20.0
+  rx_command: ^4.1.0
+  rx_widgets: ^2.2.0
+  get_it: ^1.0.2
 
 dev_dependencies:
   flutter_test:
