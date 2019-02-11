@@ -1,3 +1,10 @@
+strategy:
+  matrix:
+    linux:
+      imageName: 'ubuntu-16.04'
+    mac:
+      imageName: 'macos-10.13'
+
 trigger:
 - master
 - rel/*
@@ -7,8 +14,8 @@ pr:
 - rel/*
 
 pool:
-  vmImage: 'Ubuntu-16.04'
+  vmImage: $(imageName)
 
 steps:
-- script: git submodule update --init --recursive && ./flutterw test
+- script: ./flutterw test
   displayName: 'Flutter Test'
