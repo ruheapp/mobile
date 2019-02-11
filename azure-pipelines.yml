@@ -17,5 +17,5 @@ pool:
   vmImage: $(imageName)
 
 steps:
-- script: ./flutterw test
+- script: uame -a && ./flutterw test
   displayName: 'Flutter Test'
