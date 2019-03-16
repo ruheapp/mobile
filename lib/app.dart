@@ -85,10 +85,16 @@ class App extends State<AppWidget> {
 
   @override
   Widget build(BuildContext context) {
+    final typography = Typography(
+        platform: defaultTargetPlatform,
+        dense: Typography.dense2018,
+        englishLike: Typography.englishLike2018,
+        tall: Typography.tall2018);
+
     return MaterialApp(
       title: 'Ruhe',
       initialRoute: '/login',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(primarySwatch: Colors.blue, typography: typography),
       onGenerateRoute: App.locator<Router>().generator,
     );
   }
