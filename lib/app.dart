@@ -3,6 +3,7 @@ import 'package:get_it/get_it.dart';
 import 'package:fluro/fluro.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:flutter/foundation.dart';
 
 import 'package:ruhe/interfaces.dart';
 import 'package:ruhe/pages/login.dart';
@@ -35,7 +36,9 @@ class FirebaseLoginManager extends LoginManager {
 
   @override
   Future<UserInfo> ensureNamedUser() async {
-    if (_currentUser.email != null && _currentUser.email.isNotEmpty) {
+    if (_currentUser != null &&
+        _currentUser.email != null &&
+        _currentUser.email.isNotEmpty) {
       return _currentUser;
     }
 
