@@ -69,7 +69,7 @@ class _HelloPageState extends State<HelloPage> {
                 currentIcon = i;
               });
             },
-            animationCurve: Curves.easeInOut,
+            animationCurve: Curves.easeInOutCubic,
             animationDuration: Duration(milliseconds: 250),
             items: <Widget>[
               NavigationBarButton(
