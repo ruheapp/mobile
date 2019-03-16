@@ -36,20 +36,18 @@ class FirebaseLoginManager extends LoginManager {
 
   @override
   Future<UserInfo> ensureNamedUser() async {
+    _currentUser = _currentUser ?? await FirebaseAuth.instance.currentUser();
+
     if (_currentUser != null &&
         _currentUser.email != null &&
         _currentUser.email.isNotEmpty) {
       return _currentUser;
     }
 
-    try {
-      final newUser = await _upgradeAnonymousUser();
-      _currentUser = newUser;
+    final newUser = await _upgradeAnonymousUser();
+    _currentUser = newUser;
 
-      return newUser;
-    } finally {
-      await logout();
-    }
+    return newUser;
   }
 
   Future<UserInfo> _upgradeAnonymousUser() async {

@@ -33,7 +33,7 @@ class _LoginPageState extends State<LoginPage> {
       lm.login().then((u) => setState(() {
             print("delayed login!");
             _currentUser = u;
-            Navigator.of(context).pushReplacementNamed("/");
+            Navigator.of(context).pop();
           }));
     }
   }
