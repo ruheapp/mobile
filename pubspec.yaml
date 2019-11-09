@@ -19,20 +19,19 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: '< 99.0.0'
-  firebase_auth: '< 99.0.0'
-  get_it: '< 99.0.0'
-  google_sign_in: '< 99.0.0'
-  quiver: '< 99.0.0'
-  rxdart: '< 99.0.0'
+  cupertino_icons: "< 99.0.0"
+  firebase: "< 99.0.0"
+  get_it: "< 99.0.0"
+  graphql: "< 99.0.0"
+  quiver: "< 99.0.0"
+  rxdart: "< 99.0.0"
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_launcher_icons: '< 99.0.0'
-  jaguar_serializer_cli: '< 99.0.0'
-  pedantic: '< 99.0.0'
-
+  flutter_launcher_icons: "< 99.0.0"
+  jaguar_serializer_cli: "< 99.0.0"
+  pedantic: "< 99.0.0"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
